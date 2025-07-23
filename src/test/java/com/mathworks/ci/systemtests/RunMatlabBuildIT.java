@@ -204,7 +204,7 @@ public class RunMatlabBuildIT {
         String BuildResultSummary= getSummaryFromBuildStatus(build);
         System.out.println("summary is");
         System.out.println(BuildResultSummary);
-        assertTrue(BuildResultSummary.contains("Tasks run: 3"));
+        assertTrue("summary is " + BuildResultSummary, BuildResultSummary.contains("Tasks run: 3"));
         assertTrue(BuildResultSummary.contains("Failed: 1"));
         assertTrue(BuildResultSummary.contains("Skipped: 1"));
 
